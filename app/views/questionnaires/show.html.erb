@@ -107,20 +107,20 @@ copybutton.onclick = ()=>{
 <div class='mt-8'>
 
 <script>
-//Switched tab
-  window.onblur = function () {
-    // do some stuff after tab was changed e.g.
-    alert('You switched the tab');
-}
+// //Switched tab
+//   window.onblur = function () {
+//     // do some stuff after tab was changed e.g.
+//     alert('You switched the tab');
+// }
 
-  let siteTitle = '';
-  window.addEventListener('blur', () => {
-    siteTitle = document.title;
-    document.title = 'Come back! :c';
-  });
-  window.addEventListener('focus', () => {
-    document.title = siteTitle;
-  });
+  // let siteTitle = '';
+  // window.addEventListener('blur', () => {
+  //   siteTitle = document.title;
+  //   document.title = 'Come back! :c';
+  // });
+  // window.addEventListener('focus', () => {
+  //   document.title = siteTitle;
+  // });
   let questions = JSON.parse('<%= raw(@questionsr.to_json) %>')
 
 </script>
@@ -138,11 +138,11 @@ copybutton.onclick = ()=>{
 <div class="info_box">
     <div class="info-title"><span>Some rules of this test</span></div>
     <div class="info-list">
-        <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
-        <div class="info">2. Once you select your answer, it can't be undone.</div>
-        <div class="info">3. You can't select any option once time goes off.</div>
-        <div class="info">4. You can't exit from the test while you're playing.</div>
-        <div class="info">5. You'll get points on the basis of your correct answers.</div>
+        <%# <div class="info">1. You will have only <span>15 seconds</span> per each question.</div> %>
+        <div class="info">1. Once you select your answer, it can't be undone.</div>
+        <%# <div class="info">3. You can't select any option once time goes off.</div> %>
+        <div class="info">2. You can't exit from the test while you're playing.</div>
+        <div class="info">3. You'll get points on the basis of your correct answers.</div>
     </div>
     <div class="buttons">
         <button class="quit">Exit</button>
@@ -154,11 +154,11 @@ copybutton.onclick = ()=>{
 <div class="quiz_box">
     <header>
         <div class="title">Test Application</div>
-        <div class="timer">
-            <div class="time_left_txt">Time Left</div>
-            <div class="timer_sec">15</div>
+        <div class="timer1">
+            <%# <div class="time_left_txt">Time Left</div>
+            <div class="timer_sec">15</div> %>
         </div>
-        <div class="time_line"></div>
+        <%# <div class="time_line"></div> %>
     </header>
     <section>
         <div class="que_text">
